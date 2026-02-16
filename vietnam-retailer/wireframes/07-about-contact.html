@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — About & Contact Wireframe</title>
+  <link rel="stylesheet" href="00-wireframe-styles.css">
+  <style>
+    .about-hero {
+      background: var(--saola-cream);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 20px;
+    }
+    .value-card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .value-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .value-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .value-text {
+      font-size: 12px;
+      color: var(--saola-gray);
+    }
+    .contact-section {
+      padding: 24px 20px;
+    }
+    .contact-card {
+      background: var(--saola-cream);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--saola-orange);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .contact-info h4 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .contact-info p {
+      font-size: 13px;
+      color: var(--saola-gray);
+    }
+    .press-section {
+      background: var(--saola-charcoal);
+      color: white;
+      padding: 32px 24px;
+    }
+    .press-kit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.1);
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .press-logo-grid {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .press-logo {
+      width: 60px;
+      height: 30px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      opacity: 0.7;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      padding: 24px;
+    }
+    .social-btn {
+      width: 48px;
+      height: 48px;
+      background: var(--saola-cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .career-card {
+      background: linear-gradient(135deg, var(--saola-orange) 0%, #E69400 100%);
+      color: white;
+      padding: 24px;
+      border-radius: 16px;
+      margin: 20px;
+    }
+    .sustainability-section {
+      padding: 32px 24px;
+      background: linear-gradient(180deg, #E8F5E9 0%, white 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-header">
+    <h1>ℹ️ ABOUT & CONTACT</h1>
+    <p>Company info, values, press, careers, how to reach us</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">About / Contact Page</div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">☰</div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="about-hero">
+      <span style="font-size: 48px; display: block; margin-bottom: 16px;">🦌</span>
+      <h1>About Saola</h1>
+      <p style="font-size: 14px; color: var(--saola-gray);">
+        Vietnamese design for modern living
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="display: flex; gap: 8px; padding: 0 20px 20px; overflow-x: auto;">
+      <a href="#values" class="filter-chip active">Our Values</a>
+      <a href="#contact" class="filter-chip">Contact</a>
+      <a href="#press" class="filter-chip">Press</a>
+      <a href="#careers" class="filter-chip">Careers</a>
+      <a href="#sustainability" class="filter-chip">Sustainability</a>
+    </div>
+
+    <!-- Mission Statement -->
+    <div class="story-block" style="padding: 32px 24px;">
+      <h2 style="font-size: 20px; margin-bottom: 16px;">Our Mission</h2>
+      <p style="font-size: 15px; line-height: 1.7;">
+        To celebrate Vietnamese craftsmanship and make beautiful design accessible. 
+        We believe your home should tell a story — and that story should include the hands that made it.
+      </p>
+    </div>
+
+    <div class="copy-suggestion">
+      "We're not just selling lamps. We're sharing a piece of Vietnam's soul."
+    </div>
+
+    <!-- Values Grid -->
+    <div id="values" class="section" style="padding-bottom: 0;">
+      <div class="section-title">What We Stand For</div>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🇻🇳</div>
+        <div class="value-title">Vietnamese Pride</div>
+        <div class="value-text">Celebrating local craft and talent</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">✨</div>
+        <div class="value-title">Design First</div>
+        <div class="value-text">Beautiful things that belong in your home</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <div class="value-title">Accessible Premium</div>
+        <div class="value-text">Quality without the luxury markup</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🌱</div>
+        <div class="value-title">Sustainable</div>
+        <div class="value-text">Local sourcing, mindful practices</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+      <div class="section-title">Get In Touch</div>
+      
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <div class="contact-info">
+          <h4>General Inquiries</h4>
+          <p>hello@saola.vn</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🛍️</div>
+        <div class="contact-info">
+          <h4>Order Support</h4>
+          <p>support@saola.vn</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">📰</div>
+        <div class="contact-info">
+          <h4>Press & Media</h4>
+          <p>press@saola.vn</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🤝</div>
+        <div class="contact-info">
+          <h4>Partnerships</h4>
+          <p>partners@saola.vn</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="section">
+      <div class="section-title">Send Us a Message</div>
+      
+      <div class="form-group">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-input" placeholder="Nguyen Van A">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="you@email.com">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Subject</label>
+        <select class="form-input" style="appearance: auto;">
+          <option>General Question</option>
+          <option>Order Support</option>
+          <option>Press Inquiry</option>
+          <option>Partnership</option>
+          <option>Feedback</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input" rows="4" placeholder="How can we help?"></textarea>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%;">Send Message</button>
+    </div>
+
+    <!-- Social Links -->
+    <div style="text-align: center; padding: 24px;">
+      <div class="section-title" style="text-align: center;">Follow Us</div>
+      <div class="social-links">
+        <a href="#" class="social-btn">📸</a>
+        <a href="#" class="social-btn">👤</a>
+        <a href="#" class="social-btn">🎵</a>
+        <a href="#" class="social-btn">📌</a>
+      </div>
+      <p style="font-size: 13px; color: var(--saola-gray);">@saoladesign</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Press Section -->
+    <div id="press" class="press-section">
+      <div style="text-align: center;">
+        <div class="section-title" style="color: rgba(255,255,255,0.7);">For Press & Media</div>
+        <h3 style="font-size: 20px; margin-bottom: 12px;">Tell Our Story</h3>
+        <p style="font-size: 14px; opacity: 0.8;">
+          We love working with journalists, bloggers, and content creators who share our passion for Vietnamese design.
+        </p>
+      </div>
+
+      <div class="press-kit-btn">
+        <div>
+          <div style="font-weight: 500;">📥 Press Kit</div>
+          <div style="font-size: 12px; opacity: 0.7;">Logos, images, fact sheet</div>
+        </div>
+        <span>→</span>
+      </div>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <p style="font-size: 12px; opacity: 0.6; margin-bottom: 12px;">As featured in</p>
+        <div class="press-logo-grid">
+          <div class="press-logo">VOGUE VN</div>
+          <div class="press-logo">ELLE DECOR</div>
+          <div class="press-logo">VOI</div>
+          <div class="press-logo">SAIGONEER</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>📰 Press Section</strong>
+      Include downloadable press kit with: hi-res logos, product images, founder photos, 
+      company fact sheet, brand guidelines excerpt. Track downloads for PR outreach.
+    </div>
+
+    <!-- Sustainability Section -->
+    <div id="sustainability" class="sustainability-section">
+      <div style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: 16px;">🌱</div>
+        <h3 style="font-size: 20px; margin-bottom: 12px;">Our Commitment</h3>
+        <p style="font-size: 14px; color: var(--saola-gray); line-height: 1.6; max-width: 300px; margin: 0 auto;">
+          Local sourcing means lower carbon footprint. Our membership mug program has saved 
+          thousands of disposable cups. We're just getting started.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 16px; justify-content: center; margin-top: 24px;">
+        <div style="text-align: center; background: white; padding: 16px; border-radius: 12px; flex: 1;">
+          <div style="font-size: 24px; font-weight: 700; color: #4CAF50;">100%</div>
+          <div style="font-size: 11px; color: var(--saola-gray);">Vietnam-sourced materials</div>
+        </div>
+        <div style="text-align: center; background: white; padding: 16px; border-radius: 12px; flex: 1;">
+          <div style="font-size: 24px; font-weight: 700; color: #4CAF50;">50K+</div>
+          <div style="font-size: 11px; color: var(--saola-gray);">Cups saved</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Careers Section -->
+    <div id="careers" class="career-card">
+      <div style="font-size: 32px; margin-bottom: 12px;">💼</div>
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Join Our Team</h3>
+      <p style="font-size: 14px; opacity: 0.9; margin-bottom: 16px;">
+        We're always looking for passionate people who love design, coffee, and Vietnamese craftsmanship.
+      </p>
+      <a href="#" class="btn btn-white btn-small">View Open Positions</a>
+    </div>
+
+    <!-- Company Info -->
+    <div class="section">
+      <div class="section-title">Company Information</div>
+      
+      <div style="font-size: 13px; color: var(--saola-gray); line-height: 2;">
+        <p><strong>Saola Design Co., Ltd.</strong></p>
+        <p>Business Registration: XXX-XXXX-XXXX</p>
+        <p>123 Xuan Thuy, Thao Dien, District 2</p>
+        <p>Ho Chi Minh City, Vietnam</p>
+      </div>
+
+      <div style="margin-top: 20px; display: flex; gap: 12px;">
+        <a href="#" style="font-size: 12px; color: var(--saola-orange);">Privacy Policy</a>
+        <span style="color: var(--saola-light-gray);">|</span>
+        <a href="#" style="font-size: 12px; color: var(--saola-orange);">Terms of Service</a>
+        <span style="color: var(--saola-light-gray);">|</span>
+        <a href="#" style="font-size: 12px; color: var(--saola-orange);">Returns</a>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">🛍️</span>
+        <span>Shop</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">☕</span>
+        <span>Cafes</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">💳</span>
+        <span>Member</span>
+      </div>
+      <div class="tab-item active">
+        <span class="tab-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Notes -->
+  <div style="max-width: 428px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; font-size: 13px;">
+    <h3 style="color: var(--saola-orange); margin-bottom: 12px;">📝 About/Contact Design Notes</h3>
+    <ul style="line-height: 2; color: #555;">
+      <li><strong>Multi-purpose page:</strong> Consolidates about, contact, press, careers</li>
+      <li><strong>Quick navigation:</strong> Anchor links let users jump to relevant section</li>
+      <li><strong>Contact options:</strong> Multiple channels for different needs</li>
+      <li><strong>Press kit:</strong> Downloadable assets for media coverage</li>
+      <li><strong>Sustainability:</strong> Growing importance for target demo</li>
+      <li><strong>Legal:</strong> Required links in footer area</li>
+    </ul>
+    
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">🖼️ Images Needed:</h4>
+    <ol style="line-height: 1.8; color: #555; padding-left: 20px;">
+      <li>Team photo (for about section)</li>
+      <li>Office/workspace shots</li>
+      <li>Press kit assets (logos, product shots)</li>
+      <li>Sustainability imagery (local sourcing, craftspeople)</li>
+    </ol>
+  </div>
+</body>
+</html>

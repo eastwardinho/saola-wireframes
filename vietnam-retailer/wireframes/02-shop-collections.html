@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — Shop & Collections Wireframe</title>
+  <link rel="stylesheet" href="00-wireframe-styles.css">
+  <style>
+    .collection-hero {
+      background: linear-gradient(135deg, #FFE4B5 0%, #FFF5E6 100%);
+      padding: 32px 20px;
+      text-align: center;
+    }
+    .collection-hero h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    .collection-tabs {
+      display: flex;
+      gap: 8px;
+      padding: 16px 20px;
+      overflow-x: auto;
+      background: white;
+      border-bottom: 1px solid var(--saola-light-gray);
+    }
+    .collection-tab {
+      flex-shrink: 0;
+      padding: 12px 20px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 500;
+      background: var(--saola-cream);
+      color: var(--saola-gray);
+    }
+    .collection-tab.active {
+      background: var(--saola-orange);
+      color: white;
+    }
+    .sort-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: var(--saola-warm-white);
+      font-size: 12px;
+    }
+    .sort-button {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 12px;
+      background: white;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+    .product-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--saola-orange);
+      color: white;
+      font-size: 9px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .product-card-shop {
+      position: relative;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .quick-add {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 32px;
+      height: 32px;
+      background: var(--saola-orange);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .collection-story {
+      background: linear-gradient(135deg, var(--saola-cream) 0%, white 100%);
+      padding: 24px 20px;
+      margin: 16px 0;
+      text-align: center;
+    }
+    .collection-story h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--saola-orange);
+    }
+    .see-in-cafe {
+      background: var(--saola-charcoal);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-header">
+    <h1>🛍️ SHOP / COLLECTIONS</h1>
+    <p>The shopping experience — filterable, browsable, story-driven</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">Shop — All Products</div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">🔍</div>
+        <div class="nav-icon" style="position: relative;">
+          🛒
+          <span style="position: absolute; top: -4px; right: -4px; background: var(--saola-orange); color: white; font-size: 8px; width: 14px; height: 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</span>
+        </div>
+        <div class="nav-icon">☰</div>
+      </div>
+    </nav>
+
+    <!-- Collection Header -->
+    <div class="collection-hero">
+      <span style="font-size: 40px;">💡</span>
+      <h2>All Lighting</h2>
+      <p style="font-size: 14px; color: var(--saola-gray);">65+ designs crafted in Vietnam</p>
+    </div>
+
+    <!-- Collection Tabs -->
+    <div class="collection-tabs">
+      <div class="collection-tab active">All</div>
+      <div class="collection-tab">🎨 Colorful Creator</div>
+      <div class="collection-tab">🧪 Experimental Rebel</div>
+      <div class="collection-tab">🌍 Cosmopolitan</div>
+      <div class="collection-tab">✨ Pretty & Posh</div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>📚 Collection Stories</strong>
+      Each collection has a personality. Tapping a collection tab loads its unique header image, 
+      story paragraph, and filtered products. Collections are curated experiences, not just filters.
+    </div>
+
+    <!-- Sort & Filter Row -->
+    <div class="sort-row">
+      <span>24 products</span>
+      <div style="display: flex; gap: 8px;">
+        <div class="sort-button">🔀 Sort</div>
+        <div class="sort-button">⚙️ Filter</div>
+      </div>
+    </div>
+
+    <!-- Filter Chips -->
+    <div class="filter-bar">
+      <div class="filter-chip active">All Types</div>
+      <div class="filter-chip">Table Lamps</div>
+      <div class="filter-chip">Floor Lamps</div>
+      <div class="filter-chip">Pendants</div>
+      <div class="filter-chip">Wall Lights</div>
+      <div class="filter-chip">Desk Lamps</div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid" style="padding-top: 0;">
+      <div class="product-card-shop">
+        <span class="product-badge">New</span>
+        <div class="product-image" style="position: relative;">
+          💡
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Colorful Creator</div>
+          <div class="product-name">Rainbow Mood Lamp</div>
+          <div class="product-price">$145</div>
+        </div>
+      </div>
+      
+      <div class="product-card-shop">
+        <span class="product-badge" style="background: #4CAF50;">Bestseller</span>
+        <div class="product-image" style="position: relative;">
+          🏮
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Pretty & Posh</div>
+          <div class="product-name">Lotus Table Lamp</div>
+          <div class="product-price">$99</div>
+        </div>
+      </div>
+      
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative;">
+          🪔
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Experimental Rebel</div>
+          <div class="product-name">Stack Floor Lamp</div>
+          <div class="product-price">$299</div>
+        </div>
+      </div>
+      
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative;">
+          ✨
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Cosmopolitan</div>
+          <div class="product-name">Clove Table Lamp</div>
+          <div class="product-price">$79</div>
+        </div>
+      </div>
+
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative;">
+          🌸
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Pretty & Posh</div>
+          <div class="product-name">Isabella Pendant</div>
+          <div class="product-price">$89</div>
+        </div>
+      </div>
+      
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative;">
+          🦩
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Colorful Creator</div>
+          <div class="product-name">Flamingo Table Lamp</div>
+          <div class="product-price">$99</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🛒 Quick Add</strong>
+      The + button adds to cart instantly (with success animation). 
+      For variants (size/color), tap opens quick-view modal. 
+      Reduces friction for impulse purchases.
+    </div>
+
+    <!-- See In Cafe Banner -->
+    <div class="see-in-cafe">
+      <span style="font-size: 32px;">☕</span>
+      <div style="text-align: left;">
+        <div style="font-weight: 600; margin-bottom: 4px;">Want to see it in person?</div>
+        <div style="font-size: 12px; opacity: 0.8;">Visit our Thao Dien cafe →</div>
+      </div>
+    </div>
+
+    <!-- More Products -->
+    <div class="product-grid">
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative;">
+          🔷
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Experimental Rebel</div>
+          <div class="product-name">Dino Floor Lamp</div>
+          <div class="product-price">$269</div>
+        </div>
+      </div>
+      
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative;">
+          ⭕
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-collection">Cosmopolitan</div>
+          <div class="product-name">Phi Table Lamp</div>
+          <div class="product-price">$99</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection Story Interstitial -->
+    <div class="collection-story">
+      <h3>🎨 Colorful Creator</h3>
+      <p style="font-size: 14px; color: var(--saola-gray); margin-bottom: 16px;">
+        Bold. Playful. Unapologetic. For those who believe a home should spark joy, not just look good on a mood board.
+      </p>
+      <a href="#" class="btn btn-primary btn-small">Explore Collection →</a>
+    </div>
+
+    <div class="copy-suggestion">
+      "Life's too short for boring lamps. Colorful Creator is for the maximalists, the joy-seekers, the 'yes, and' people."
+    </div>
+
+    <!-- Load More -->
+    <div style="text-align: center; padding: 24px;">
+      <a href="#" class="btn btn-secondary btn-small">Load More Products</a>
+      <p style="font-size: 11px; color: var(--saola-gray); margin-top: 8px;">Showing 8 of 24 products</p>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="tab-item active">
+        <span class="tab-icon">🛍️</span>
+        <span>Shop</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">☕</span>
+        <span>Cafes</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">💳</span>
+        <span>Member</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Collection Page Variant -->
+  <div class="wireframe-header" style="margin-top: 40px;">
+    <h1>🎨 COLLECTION PAGE VARIANT</h1>
+    <p>When viewing a specific collection</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">Collection — Colorful Creator</div>
+    
+    <nav class="nav">
+      <div style="font-size: 20px;">←</div>
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">🛒</div>
+      </div>
+    </nav>
+
+    <!-- Collection Hero with Story -->
+    <div style="background: linear-gradient(180deg, #FF6B6B 0%, #FFA400 100%); padding: 40px 24px; color: white; text-align: center;">
+      <div style="font-size: 48px; margin-bottom: 16px;">🎨</div>
+      <h1 style="font-size: 28px; font-weight: 300; margin-bottom: 12px;">Colorful Creator</h1>
+      <p style="font-size: 14px; opacity: 0.9; line-height: 1.6;">
+        For the bold. The playful. The ones who know that a home should spark joy.
+      </p>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🎬 Collection Hero</strong>
+      Each collection has unique gradient/color palette. 
+      Could animate or have parallax on scroll. 
+      Desktop: full-width lifestyle image with collection products staged.
+    </div>
+
+    <!-- Collection Products -->
+    <div class="sort-row">
+      <span>12 products</span>
+      <div class="sort-button">🔀 Sort</div>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card-shop">
+        <span class="product-badge">New</span>
+        <div class="product-image" style="position: relative; background: linear-gradient(135deg, #FFE4E4 0%, #FFF5E6 100%);">
+          💡
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Rainbow Mood Lamp</div>
+          <div class="product-price">$145</div>
+        </div>
+      </div>
+      
+      <div class="product-card-shop">
+        <div class="product-image" style="position: relative; background: linear-gradient(135deg, #FFE4E4 0%, #FFF5E6 100%);">
+          🦩
+          <div class="quick-add">+</div>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Flamingo Table Lamp</div>
+          <div class="product-price">$99</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Notes -->
+  <div style="max-width: 428px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; font-size: 13px;">
+    <h3 style="color: var(--saola-orange); margin-bottom: 12px;">📝 Shop Page Design Notes</h3>
+    <ul style="line-height: 2; color: #555;">
+      <li><strong>Quick Add:</strong> Must be frictionless — no page reload for add-to-cart</li>
+      <li><strong>Filters:</strong> Keep visible, scrollable chip design for mobile</li>
+      <li><strong>Collections:</strong> Not just filters — each has personality, story, unique visuals</li>
+      <li><strong>Cafe Banner:</strong> Persistent reminder that they can see items in person</li>
+      <li><strong>Infinite scroll vs pagination:</strong> Test both; lean toward "Load More" button</li>
+      <li><strong>Wishlist:</strong> Heart icon on products for logged-in users</li>
+    </ul>
+    
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">🛠️ Shopify Implementation:</h4>
+    <ol style="line-height: 1.8; color: #555; padding-left: 20px;">
+      <li>Use Shopify collections for each brand collection</li>
+      <li>Product tags for type filtering (table-lamp, floor-lamp, etc.)</li>
+      <li>Metafields for collection story content</li>
+      <li>AJAX cart for quick-add functionality</li>
+      <li>Consider Boost Commerce or similar for advanced filtering</li>
+    </ol>
+  </div>
+</body>
+</html>

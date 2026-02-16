@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — Product Detail Wireframe</title>
+  <link rel="stylesheet" href="00-wireframe-styles.css">
+  <style>
+    .product-gallery {
+      position: relative;
+      background: var(--saola-cream);
+    }
+    .main-image {
+      width: 100%;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+    .thumbnail-strip {
+      display: flex;
+      gap: 8px;
+      padding: 12px 20px;
+      overflow-x: auto;
+      background: white;
+    }
+    .thumbnail {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      background: var(--saola-cream);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+    }
+    .thumbnail.active {
+      border-color: var(--saola-orange);
+    }
+    .product-header {
+      padding: 20px;
+    }
+    .product-collection-tag {
+      display: inline-block;
+      background: var(--saola-cream);
+      color: var(--saola-orange);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .product-title {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .product-price-large {
+      font-size: 24px;
+      color: var(--saola-orange);
+      font-weight: 600;
+    }
+    .product-price-vnd {
+      font-size: 14px;
+      color: var(--saola-gray);
+    }
+    .variant-section {
+      padding: 0 20px 20px;
+    }
+    .variant-label {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .variant-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .variant-option {
+      padding: 12px 20px;
+      border: 2px solid var(--saola-light-gray);
+      border-radius: 8px;
+      font-size: 13px;
+      background: white;
+    }
+    .variant-option.selected {
+      border-color: var(--saola-orange);
+      background: var(--saola-cream);
+    }
+    .color-option {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+    }
+    .color-option.selected {
+      border-color: var(--saola-orange);
+      box-shadow: 0 0 0 2px white inset;
+    }
+    .add-to-cart-section {
+      padding: 20px;
+      background: white;
+      border-top: 1px solid var(--saola-light-gray);
+      position: sticky;
+      bottom: 56px;
+    }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .qty-btn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--saola-light-gray);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      background: white;
+    }
+    .qty-value {
+      font-size: 18px;
+      font-weight: 500;
+      width: 40px;
+      text-align: center;
+    }
+    .add-btn {
+      flex: 1;
+      padding: 16px;
+      background: var(--saola-orange);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .cafe-cta {
+      background: var(--saola-charcoal);
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .cafe-cta-icon {
+      font-size: 40px;
+    }
+    .cafe-cta-text h4 {
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .cafe-cta-text p {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+    .product-details {
+      padding: 24px 20px;
+    }
+    .accordion-item {
+      border-bottom: 1px solid var(--saola-light-gray);
+      padding: 16px 0;
+    }
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+    }
+    .accordion-content {
+      padding-top: 12px;
+      font-size: 14px;
+      color: var(--saola-gray);
+      line-height: 1.6;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .spec-item {
+      font-size: 13px;
+    }
+    .spec-label {
+      color: var(--saola-gray);
+      margin-bottom: 2px;
+    }
+    .spec-value {
+      font-weight: 500;
+    }
+    .qr-section {
+      background: var(--saola-cream);
+      padding: 24px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .related-products {
+      padding: 24px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-header">
+    <h1>📦 PRODUCT DETAIL</h1>
+    <p>The conversion page — images, story, specs, action</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">Product Detail Page</div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <div style="font-size: 20px;">←</div>
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">♡</div>
+        <div class="nav-icon">🛒</div>
+      </div>
+    </nav>
+
+    <!-- Product Gallery -->
+    <div class="product-gallery">
+      <div class="main-image">💡</div>
+      <div style="position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--saola-orange);"></div>
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2);"></div>
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2);"></div>
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(0,0,0,0.2);"></div>
+      </div>
+    </div>
+
+    <div class="thumbnail-strip">
+      <div class="thumbnail active">📷</div>
+      <div class="thumbnail">📷</div>
+      <div class="thumbnail">📷</div>
+      <div class="thumbnail">🎬</div>
+      <div class="thumbnail">📐</div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>📸 Gallery Requirements</strong>
+      <br>1. Hero shot (white/neutral background)
+      <br>2. Lifestyle shot (in-situ)
+      <br>3. Detail shot (material close-up)
+      <br>4. Scale shot (with reference object)
+      <br>5. Video if available (15-30s loop)
+    </div>
+
+    <!-- Product Header -->
+    <div class="product-header">
+      <div class="product-collection-tag">🎨 Colorful Creator</div>
+      <h1 class="product-title">Rainbow Mood Lamp</h1>
+      <div style="display: flex; align-items: baseline; gap: 12px;">
+        <span class="product-price-large">$145</span>
+        <span class="product-price-vnd">≈ 3,625,000₫</span>
+      </div>
+      <div style="margin-top: 12px; display: flex; align-items: center; gap: 8px;">
+        <span style="color: #FFB800;">★★★★★</span>
+        <span style="font-size: 13px; color: var(--saola-gray);">4.8 (24 reviews)</span>
+      </div>
+    </div>
+
+    <div class="copy-suggestion">
+      "Handcrafted terrazzo base meets playful colored shade. Perfect for the corner that needs a conversation starter."
+    </div>
+
+    <!-- Variants -->
+    <div class="variant-section">
+      <div class="variant-label">Color: <strong>Coral Pink</strong></div>
+      <div class="variant-options">
+        <div class="color-option selected" style="background: #FF6B6B;"></div>
+        <div class="color-option" style="background: #FFD93D;"></div>
+        <div class="color-option" style="background: #6BCB77;"></div>
+        <div class="color-option" style="background: #4D96FF;"></div>
+        <div class="color-option" style="background: #9B59B6;"></div>
+      </div>
+    </div>
+
+    <div class="variant-section">
+      <div class="variant-label">Size</div>
+      <div class="variant-options">
+        <div class="variant-option selected">Small (30cm)</div>
+        <div class="variant-option">Medium (45cm)</div>
+        <div class="variant-option">Large (60cm)</div>
+      </div>
+    </div>
+
+    <!-- Add to Cart -->
+    <div class="add-to-cart-section">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <div class="quantity-selector">
+          <button class="qty-btn">−</button>
+          <span class="qty-value">1</span>
+          <button class="qty-btn">+</button>
+        </div>
+        <button class="add-btn">
+          <span>🛒</span> Add to Cart — $145
+        </button>
+      </div>
+      <div style="text-align: center; margin-top: 12px; font-size: 12px; color: var(--saola-gray);">
+        🚚 Free delivery in HCMC · Ships in 3-5 days
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>💳 Member Pricing</strong>
+      If user is logged in as member, show: "Member price: $130.50 (10% off)" 
+      with original price crossed out. For guests: "Join membership for 10% off"
+    </div>
+
+    <!-- See in Cafe CTA -->
+    <div class="cafe-cta">
+      <span class="cafe-cta-icon">☕</span>
+      <div class="cafe-cta-text">
+        <h4>See this lamp in person</h4>
+        <p>Available to view at Thao Dien Cafe</p>
+      </div>
+      <span style="font-size: 20px; margin-left: auto;">→</span>
+    </div>
+
+    <!-- QR Code Section -->
+    <div class="qr-section">
+      <div class="qr-code">[QR]</div>
+      <div>
+        <div style="font-weight: 500; margin-bottom: 4px;">Scan in Cafe</div>
+        <div style="font-size: 13px; color: var(--saola-gray);">
+          See this item in our cafe? Scan the QR code to save it or buy from your phone.
+        </div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>📱 QR Code Strategy</strong>
+      Every product has unique QR linking to this page. In-cafe items have physical QR tags. 
+      When scanned, UTM params track which cafe/location drove the visit.
+    </div>
+
+    <!-- Product Details Accordion -->
+    <div class="product-details">
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Description</span>
+          <span>▼</span>
+        </div>
+        <div class="accordion-content">
+          A playful table lamp that brings instant warmth to any corner. The terrazzo base is hand-poured 
+          by artisans in Binh Duong, while the colorful shade adds a pop of personality. Perfect as a 
+          bedside companion or living room accent.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Specifications</span>
+          <span>▶</span>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Materials & Care</span>
+          <span>▶</span>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <span>Shipping & Returns</span>
+          <span>▶</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specs (expanded state) -->
+    <div style="padding: 0 20px 20px; background: var(--saola-cream); margin: 0 20px; border-radius: 12px;">
+      <div style="padding: 16px 0; font-weight: 500;">📐 Specifications</div>
+      <div class="specs-grid">
+        <div class="spec-item">
+          <div class="spec-label">Height</div>
+          <div class="spec-value">45 cm</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Base Diameter</div>
+          <div class="spec-value">18 cm</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Weight</div>
+          <div class="spec-value">2.3 kg</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Bulb Type</div>
+          <div class="spec-value">E27 LED (included)</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Cord Length</div>
+          <div class="spec-value">180 cm</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label">Switch</div>
+          <div class="spec-value">Inline dimmer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vietnamese Craft Story -->
+    <div class="section">
+      <div class="section-title">🇻🇳 Made in Vietnam</div>
+      <div style="display: flex; gap: 16px; align-items: start;">
+        <div style="width: 80px; height: 80px; background: var(--saola-cream); border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 32px;">
+          👩‍🎨
+        </div>
+        <div>
+          <div style="font-weight: 500; margin-bottom: 4px;">Artisan-crafted in Binh Duong</div>
+          <div style="font-size: 13px; color: var(--saola-gray); line-height: 1.5;">
+            Each terrazzo base is hand-poured and polished by skilled craftspeople. 
+            No two are exactly alike — that's the beauty.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy-suggestion">
+      "The terrazzo tradition in Vietnam goes back decades. We're just giving it a new stage to shine."
+    </div>
+
+    <!-- Related Products -->
+    <div class="related-products">
+      <div class="section-title">You Might Also Love</div>
+      <div style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 12px;">
+        <div class="product-card" style="flex-shrink: 0; width: 140px;">
+          <div class="product-image" style="height: 120px;">🏮</div>
+          <div class="product-info">
+            <div class="product-name">Lotus Table Lamp</div>
+            <div class="product-price">$99</div>
+          </div>
+        </div>
+        <div class="product-card" style="flex-shrink: 0; width: 140px;">
+          <div class="product-image" style="height: 120px;">✨</div>
+          <div class="product-info">
+            <div class="product-name">Clove Table Lamp</div>
+            <div class="product-price">$79</div>
+          </div>
+        </div>
+        <div class="product-card" style="flex-shrink: 0; width: 140px;">
+          <div class="product-image" style="height: 120px;">🪔</div>
+          <div class="product-info">
+            <div class="product-name">Stack Floor Lamp</div>
+            <div class="product-price">$299</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div class="section-title" style="margin-bottom: 0;">Customer Reviews</div>
+        <a href="#" style="font-size: 13px; color: var(--saola-orange);">See All (24)</a>
+      </div>
+      
+      <div style="background: var(--saola-cream); padding: 16px; border-radius: 12px; margin-bottom: 12px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <div style="width: 36px; height: 36px; background: var(--saola-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">T</div>
+          <div>
+            <div style="font-weight: 500; font-size: 14px;">Thuy N.</div>
+            <div style="font-size: 11px; color: var(--saola-gray);">Verified Buyer · 2 weeks ago</div>
+          </div>
+        </div>
+        <div style="color: #FFB800; margin-bottom: 8px;">★★★★★</div>
+        <p style="font-size: 13px; color: var(--saola-gray); line-height: 1.5;">
+          "Absolutely in love! The quality is amazing and it looks even better in person. 
+          I first saw it at the Thao Dien cafe and had to have it. Delivery was fast too."
+        </p>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="tab-item active">
+        <span class="tab-icon">🛍️</span>
+        <span>Shop</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">☕</span>
+        <span>Cafes</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">💳</span>
+        <span>Member</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Notes -->
+  <div style="max-width: 428px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; font-size: 13px;">
+    <h3 style="color: var(--saola-orange); margin-bottom: 12px;">📝 Product Page Design Notes</h3>
+    <ul style="line-height: 2; color: #555;">
+      <li><strong>Gallery:</strong> Swipeable, zoomable. Video thumbnail plays on tap.</li>
+      <li><strong>Sticky CTA:</strong> Add-to-cart stays visible on scroll (mobile)</li>
+      <li><strong>Member pricing:</strong> Show savings prominently if logged in</li>
+      <li><strong>Cafe link:</strong> Deep-link to specific cafe where item is displayed</li>
+      <li><strong>QR mention:</strong> Remind users they can scan in-cafe</li>
+      <li><strong>Trust signals:</strong> Reviews, artisan story, materials, shipping</li>
+      <li><strong>Upsell:</strong> Related products + "Complete the look" bundle</li>
+    </ul>
+    
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">🖼️ Images Per Product:</h4>
+    <ol style="line-height: 1.8; color: #555; padding-left: 20px;">
+      <li>Hero shot (white background, professional)</li>
+      <li>Lifestyle 1 (in beautiful Vietnamese home)</li>
+      <li>Lifestyle 2 (detail/material close-up)</li>
+      <li>Scale reference (with common object or person)</li>
+      <li>Video loop (optional but high-impact)</li>
+    </ol>
+  </div>
+</body>
+</html>

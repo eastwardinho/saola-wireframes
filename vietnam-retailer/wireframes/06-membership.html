@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — Membership Wireframe</title>
+  <link rel="stylesheet" href="00-wireframe-styles.css">
+  <style>
+    .member-hero {
+      background: linear-gradient(180deg, var(--saola-orange) 0%, #E69400 100%);
+      color: white;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .member-hero h1 {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+    .mug-showcase {
+      padding: 40px 24px;
+      text-align: center;
+      background: var(--saola-cream);
+    }
+    .mug-image {
+      width: 180px;
+      height: 180px;
+      background: white;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      box-shadow: 0 8px 30px rgba(255,164,0,0.3);
+    }
+    .perk-list {
+      padding: 24px 20px;
+    }
+    .perk-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--saola-light-gray);
+    }
+    .perk-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--saola-cream);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .perk-content h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .perk-content p {
+      font-size: 13px;
+      color: var(--saola-gray);
+      line-height: 1.4;
+    }
+    .savings-calculator {
+      background: var(--saola-charcoal);
+      color: white;
+      padding: 32px 24px;
+    }
+    .calculator-title {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .calculator-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .calculator-label {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+    .calculator-value {
+      font-weight: 600;
+    }
+    .calculator-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      margin-top: 12px;
+      border-top: 2px solid var(--saola-orange);
+    }
+    .calculator-total .calculator-value {
+      color: var(--saola-orange);
+      font-size: 20px;
+    }
+    .price-card {
+      background: white;
+      border-radius: 24px;
+      margin: 24px 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    .price-header {
+      background: var(--saola-orange);
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+    .price-amount {
+      font-size: 48px;
+      font-weight: 700;
+    }
+    .price-period {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .price-note {
+      font-size: 12px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    .price-body {
+      padding: 24px;
+    }
+    .price-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      font-size: 14px;
+    }
+    .price-feature::before {
+      content: '✓';
+      color: var(--saola-orange);
+      font-weight: bold;
+      width: 20px;
+    }
+    .signup-form {
+      padding: 24px;
+      background: var(--saola-cream);
+    }
+    .eco-section {
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .eco-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--saola-light-gray);
+      padding: 16px 20px;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    .faq-answer {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--saola-gray);
+      line-height: 1.6;
+    }
+    .testimonial {
+      background: var(--saola-cream);
+      padding: 24px;
+      border-radius: 16px;
+      margin: 16px 20px;
+    }
+    .testimonial-quote {
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--saola-orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-header">
+    <h1>💳 MEMBERSHIP</h1>
+    <p>The loyalty flywheel — mug, discounts, community</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">Membership Page</div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">☰</div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="member-hero">
+      <span style="font-size: 48px; display: block; margin-bottom: 16px;">🏆</span>
+      <h1>Join the Saola Family</h1>
+      <p style="font-size: 15px; opacity: 0.9;">
+        One membership. Lifetime perks. Your own mug.
+      </p>
+    </div>
+
+    <!-- Mug Showcase -->
+    <div class="mug-showcase">
+      <div class="mug-image">🥤</div>
+      <h2 style="font-size: 22px; margin-bottom: 8px;">Your Saola Mug</h2>
+      <p style="font-size: 14px; color: var(--saola-gray); max-width: 280px; margin: 0 auto;">
+        Premium insulated stainless steel. Keeps drinks hot for 6 hours, cold for 12. 
+        Yours to keep forever.
+      </p>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🥤 The Mug</strong>
+      This is the hero product of membership. Show multiple angles, color options if available. 
+      High-quality render or photo. The mug becomes a walking billboard.
+    </div>
+
+    <div class="copy-suggestion">
+      "This isn't just a mug. It's your membership card. Your sustainability statement. 
+      Your daily reminder that you're part of something special."
+    </div>
+
+    <!-- Perks List -->
+    <div class="perk-list">
+      <div class="section-title">What You Get</div>
+      
+      <div class="perk-item">
+        <div class="perk-icon">🥤</div>
+        <div class="perk-content">
+          <h4>Your Branded Mug</h4>
+          <p>Premium insulated metal mug (worth 375,000₫). Use it every visit.</p>
+        </div>
+      </div>
+
+      <div class="perk-item">
+        <div class="perk-icon">☕</div>
+        <div class="perk-content">
+          <h4>10% Off All F&B — Forever</h4>
+          <p>Every coffee, every pastry, every time. For as long as you're alive.</p>
+        </div>
+      </div>
+
+      <div class="perk-item">
+        <div class="perk-icon">💡</div>
+        <div class="perk-content">
+          <h4>10% Off All Products</h4>
+          <p>Lamps, furniture, merchandise. The savings add up fast.</p>
+        </div>
+      </div>
+
+      <div class="perk-item">
+        <div class="perk-icon">🎁</div>
+        <div class="perk-content">
+          <h4>Early Access</h4>
+          <p>Shop new collections 48 hours before everyone else.</p>
+        </div>
+      </div>
+
+      <div class="perk-item">
+        <div class="perk-icon">🎂</div>
+        <div class="perk-content">
+          <h4>Birthday Surprise</h4>
+          <p>A special treat on your birthday. We remember.</p>
+        </div>
+      </div>
+
+      <div class="perk-item">
+        <div class="perk-icon">🎉</div>
+        <div class="perk-content">
+          <h4>Member Events</h4>
+          <p>Exclusive workshops, launches, and gatherings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Savings Calculator -->
+    <div class="savings-calculator">
+      <div class="calculator-title">💰 See Your Savings</div>
+      <p style="font-size: 13px; opacity: 0.7; text-align: center; margin-bottom: 20px;">
+        Based on 2 cafe visits/week + 1 product/year
+      </p>
+      
+      <div class="calculator-row">
+        <span class="calculator-label">Coffee savings (2x/week)</span>
+        <span class="calculator-value">520,000₫/yr</span>
+      </div>
+      <div class="calculator-row">
+        <span class="calculator-label">One lamp purchase ($145)</span>
+        <span class="calculator-value">362,500₫</span>
+      </div>
+      <div class="calculator-row">
+        <span class="calculator-label">Mug value</span>
+        <span class="calculator-value">375,000₫</span>
+      </div>
+      
+      <div class="calculator-total">
+        <span class="calculator-label" style="font-weight: 600;">Year 1 Value</span>
+        <span class="calculator-value">1,257,500₫</span>
+      </div>
+      
+      <p style="font-size: 12px; opacity: 0.6; text-align: center; margin-top: 16px;">
+        Membership pays for itself in ~4 months
+      </p>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🧮 Calculator</strong>
+      Could be interactive — sliders for "how often do you visit?" and "what might you buy?" 
+      Personalized savings projection makes it tangible.
+    </div>
+
+    <!-- Price Card -->
+    <div class="price-card">
+      <div class="price-header">
+        <div class="price-amount">500,000₫</div>
+        <div class="price-period">One-time • Lifetime access</div>
+        <div class="price-note">≈ $20 USD</div>
+      </div>
+      <div class="price-body">
+        <div class="price-feature">Premium insulated mug included</div>
+        <div class="price-feature">10% off all F&B, forever</div>
+        <div class="price-feature">10% off all products, forever</div>
+        <div class="price-feature">Early access to new drops</div>
+        <div class="price-feature">Birthday perks</div>
+        <div class="price-feature">Member-only events</div>
+        
+        <button class="btn btn-primary" style="display: block; width: 100%; margin-top: 24px;">
+          Become a Member →
+        </button>
+        
+        <p style="font-size: 11px; color: var(--saola-gray); text-align: center; margin-top: 12px;">
+          No recurring charges. No catches. Just perks.
+        </p>
+      </div>
+    </div>
+
+    <div class="copy-suggestion">
+      "This isn't a subscription. It's an investment in better coffee, better design, and a community that gets it."
+    </div>
+
+    <!-- Eco Section -->
+    <div class="eco-section">
+      <div class="eco-icon">🌱</div>
+      <h3 style="font-size: 20px; margin-bottom: 12px;">Good for the Planet Too</h3>
+      <p style="font-size: 14px; color: var(--saola-gray); line-height: 1.6;">
+        Every time you use your mug, that's one less paper cup. 
+        Our members save thousands of cups from landfills each year.
+      </p>
+      
+      <div style="display: flex; gap: 16px; justify-content: center; margin-top: 24px;">
+        <div style="text-align: center;">
+          <div style="font-size: 28px; font-weight: 700; color: var(--saola-orange);">50K+</div>
+          <div style="font-size: 11px; color: var(--saola-gray);">Cups saved</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 28px; font-weight: 700; color: var(--saola-orange);">2,000+</div>
+          <div style="font-size: 11px; color: var(--saola-gray);">Members</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🌱 Sustainability Angle</strong>
+      Track and display real impact numbers. Could show "You've saved X cups" in member dashboard. 
+      Ties into Vietnamese eco-consciousness trend.
+    </div>
+
+    <!-- Testimonial -->
+    <div class="testimonial">
+      <div class="testimonial-quote">
+        "I signed up for the mug, honestly. But the 10% off has saved me so much — I'm there almost every day. 
+        Best 500k I've spent."
+      </div>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">L</div>
+        <div>
+          <div style="font-weight: 500; font-size: 14px;">Linh T.</div>
+          <div style="font-size: 12px; color: var(--saola-gray);">Member since 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section" style="padding-bottom: 0;">
+      <div class="section-title">Common Questions</div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is this really lifetime?</span>
+        <span>▼</span>
+      </div>
+      <div class="faq-answer">
+        Yes. Pay once, member forever. No annual fees, no renewals. Your grandchildren could technically use your membership (but please don't share your mug).
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I use benefits at any location?</span>
+        <span>▶</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What if I lose my mug?</span>
+        <span>▶</span>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I give a membership as a gift?</span>
+        <span>▶</span>
+      </div>
+    </div>
+
+    <!-- Sign Up CTA -->
+    <div style="padding: 32px 24px; background: var(--saola-orange); text-align: center; color: white;">
+      <h3 style="font-size: 22px; margin-bottom: 8px;">Ready to Join?</h3>
+      <p style="font-size: 14px; opacity: 0.9; margin-bottom: 20px;">
+        Sign up now, pick up your mug at any cafe.
+      </p>
+      <button class="btn btn-white" style="display: block; width: 100%;">
+        Become a Member — 500,000₫
+      </button>
+      <p style="font-size: 11px; opacity: 0.7; margin-top: 12px;">
+        Or ask any barista to sign you up in person
+      </p>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">🛍️</span>
+        <span>Shop</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">☕</span>
+        <span>Cafes</span>
+      </div>
+      <div class="tab-item active">
+        <span class="tab-icon">💳</span>
+        <span>Member</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Notes -->
+  <div style="max-width: 428px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; font-size: 13px;">
+    <h3 style="color: var(--saola-orange); margin-bottom: 12px;">📝 Membership Page Design Notes</h3>
+    <ul style="line-height: 2; color: #555;">
+      <li><strong>Hero the mug:</strong> It's the tangible takeaway — make it look premium</li>
+      <li><strong>Lifetime emphasis:</strong> "Forever" language throughout — it's the hook</li>
+      <li><strong>Savings calculator:</strong> Make the value tangible and personal</li>
+      <li><strong>Single price point:</strong> No tiers, no complexity. One membership.</li>
+      <li><strong>Eco angle:</strong> Appeals to conscious consumers, adds meaning</li>
+      <li><strong>FAQ:</strong> Address objections before they become blockers</li>
+      <li><strong>In-person option:</strong> Mention cafe signup — reduces online friction</li>
+    </ul>
+    
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">🖼️ Images Needed:</h4>
+    <ol style="line-height: 1.8; color: #555; padding-left: 20px;">
+      <li>Mug hero shot (multiple angles)</li>
+      <li>Mug in-use lifestyle (person drinking from it)</li>
+      <li>Member community photo (if available)</li>
+      <li>Mug color variants (if applicable)</li>
+    </ol>
+
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">💡 Implementation Notes:</h4>
+    <ul style="line-height: 1.8; color: #555;">
+      <li>Shopify: Membership as a product (one-time purchase)</li>
+      <li>Customer tags for discount codes</li>
+      <li>Consider Loyalty Lion or similar app for tracking</li>
+      <li>POS integration for cafe purchases</li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — Cafes Wireframe</title>
+  <link rel="stylesheet" href="00-wireframe-styles.css">
+  <style>
+    .cafe-hero {
+      background: linear-gradient(180deg, #4A2C1A 0%, #2D1A0F 100%);
+      color: white;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .cafe-hero h1 {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+    .cafe-concept {
+      display: flex;
+      gap: 12px;
+      padding: 20px;
+      overflow-x: auto;
+    }
+    .concept-card {
+      flex-shrink: 0;
+      width: 140px;
+      text-align: center;
+      padding: 20px;
+      background: var(--saola-cream);
+      border-radius: 16px;
+    }
+    .concept-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .concept-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .concept-text {
+      font-size: 11px;
+      color: var(--saola-gray);
+    }
+    .location-card-full {
+      margin: 16px 20px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .location-image-large {
+      height: 200px;
+      background: linear-gradient(135deg, var(--saola-cream) 0%, #E5D4C0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+    }
+    .location-details {
+      padding: 24px;
+    }
+    .location-badge {
+      display: inline-block;
+      background: var(--saola-orange);
+      color: white;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .location-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .location-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .location-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--saola-gray);
+    }
+    .location-meta-icon {
+      width: 20px;
+      text-align: center;
+    }
+    .location-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .action-btn {
+      flex: 1;
+      padding: 14px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .action-btn-primary {
+      background: var(--saola-orange);
+      color: white;
+    }
+    .action-btn-secondary {
+      background: var(--saola-cream);
+      color: var(--saola-charcoal);
+    }
+    .menu-preview {
+      padding: 24px;
+      background: var(--saola-charcoal);
+      color: white;
+    }
+    .menu-category {
+      margin-bottom: 20px;
+    }
+    .menu-category-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+      margin-bottom: 12px;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 14px;
+    }
+    .menu-item-name {
+      opacity: 0.9;
+    }
+    .menu-item-price {
+      color: var(--saola-orange);
+    }
+    .everything-for-sale {
+      background: var(--saola-orange);
+      color: white;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .sale-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+    .coming-soon-card {
+      margin: 16px 20px;
+      background: linear-gradient(135deg, #E8E8E8 0%, #D0D0D0 100%);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .coming-soon-badge {
+      display: inline-block;
+      background: var(--saola-gray);
+      color: white;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-header">
+    <h1>☕ CAFES</h1>
+    <p>Where the brand comes alive — showroom meets coffee shop</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">Cafes Page</div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">🔍</div>
+        <div class="nav-icon">☰</div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="cafe-hero">
+      <span style="font-size: 48px; display: block; margin-bottom: 16px;">☕</span>
+      <h1>Saola Design Cafes</h1>
+      <p style="font-size: 14px; opacity: 0.8;">
+        Great coffee. Beautiful design. Everything's for sale.
+      </p>
+    </div>
+
+    <!-- Concept Cards -->
+    <div class="cafe-concept">
+      <div class="concept-card">
+        <div class="concept-icon">☕</div>
+        <div class="concept-title">Great Coffee</div>
+        <div class="concept-text">Vietnamese speciality, made with care</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-icon">💡</div>
+        <div class="concept-title">Touch & Try</div>
+        <div class="concept-text">See products in a real setting</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-icon">📱</div>
+        <div class="concept-title">Scan & Buy</div>
+        <div class="concept-text">QR codes on every item</div>
+      </div>
+      <div class="concept-card">
+        <div class="concept-icon">🏆</div>
+        <div class="concept-title">Member Perks</div>
+        <div class="concept-text">10% off everything, forever</div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>💡 The Tom Dixon Model</strong>
+      Every cafe is a showroom. Every chair, lamp, table is for sale. 
+      Customers experience products naturally while enjoying coffee. 
+      QR codes make purchasing frictionless.
+    </div>
+
+    <!-- Featured Location -->
+    <div class="location-card-full">
+      <div class="location-image-large">🏠</div>
+      <div class="location-details">
+        <div class="location-badge">Flagship</div>
+        <div class="location-title">Saola Thao Dien</div>
+        <p style="font-size: 14px; color: var(--saola-gray); margin-bottom: 16px;">
+          Our first home. A two-story oasis of Vietnamese design in the heart of District 2.
+        </p>
+        
+        <div class="location-meta">
+          <div class="location-meta-item">
+            <span class="location-meta-icon">📍</span>
+            <span>123 Xuan Thuy, Thao Dien, District 2</span>
+          </div>
+          <div class="location-meta-item">
+            <span class="location-meta-icon">🕐</span>
+            <span>7:00 AM – 10:00 PM daily</span>
+          </div>
+          <div class="location-meta-item">
+            <span class="location-meta-icon">📞</span>
+            <span>+84 28 1234 5678</span>
+          </div>
+        </div>
+
+        <div class="location-actions">
+          <a href="#" class="action-btn action-btn-primary">Get Directions</a>
+          <a href="#" class="action-btn action-btn-secondary">View Products</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copy-suggestion">
+      "Walk in for a coffee. Leave with inspiration. (And maybe a new lamp.)"
+    </div>
+
+    <!-- Everything For Sale Banner -->
+    <div class="everything-for-sale">
+      <div class="sale-icon">🛋️</div>
+      <h3 style="font-size: 20px; margin-bottom: 8px;">Everything You See Is For Sale</h3>
+      <p style="font-size: 14px; opacity: 0.9; margin-bottom: 16px;">
+        The chair you're sitting on. The lamp above you. The table holding your coffee. 
+        Scan the QR code and it's yours.
+      </p>
+      <a href="#" class="btn btn-white btn-small">How It Works</a>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>📱 QR Code Experience</strong>
+      Every product has a small, elegant QR tag. Scanning opens the product page 
+      with "You're at Thao Dien" personalization. Can add to cart, wishlist, 
+      or request staff help.
+    </div>
+
+    <!-- Menu Preview -->
+    <div class="menu-preview">
+      <h3 style="font-size: 18px; margin-bottom: 20px;">☕ Coffee & More</h3>
+      
+      <div class="menu-category">
+        <div class="menu-category-title">Vietnamese Specialties</div>
+        <div class="menu-item">
+          <span class="menu-item-name">Cà phê sữa đá</span>
+          <span class="menu-item-price">55,000₫</span>
+        </div>
+        <div class="menu-item">
+          <span class="menu-item-name">Bạc xỉu</span>
+          <span class="menu-item-price">50,000₫</span>
+        </div>
+        <div class="menu-item">
+          <span class="menu-item-name">Cà phê trứng</span>
+          <span class="menu-item-price">65,000₫</span>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="menu-category-title">Espresso</div>
+        <div class="menu-item">
+          <span class="menu-item-name">Flat white</span>
+          <span class="menu-item-price">60,000₫</span>
+        </div>
+        <div class="menu-item">
+          <span class="menu-item-name">Cappuccino</span>
+          <span class="menu-item-price">60,000₫</span>
+        </div>
+      </div>
+
+      <p style="font-size: 12px; opacity: 0.6; margin-top: 16px; text-align: center;">
+        Members get 10% off all F&B
+      </p>
+    </div>
+
+    <!-- Membership Teaser -->
+    <div class="membership-card" style="margin: 20px;">
+      <div class="membership-badge">Cafe Regular?</div>
+      <div class="membership-title">Join the Family</div>
+      <p style="font-size: 14px; opacity: 0.9; margin-bottom: 16px;">
+        Your own branded mug. 10% off coffee forever. Skip the paper cups.
+      </p>
+      <a href="#" class="btn btn-white" style="display: block;">Learn About Membership →</a>
+    </div>
+
+    <!-- Coming Soon Location -->
+    <div class="coming-soon-card">
+      <div class="coming-soon-badge">Coming 2027</div>
+      <div style="font-size: 40px; margin-bottom: 12px;">🏗️</div>
+      <h3 style="font-size: 18px; margin-bottom: 8px;">Saola District 1</h3>
+      <p style="font-size: 13px; color: var(--saola-gray);">
+        Our second location. Stay tuned for the announcement.
+      </p>
+      <div style="margin-top: 16px;">
+        <a href="#" class="btn btn-secondary btn-small">Get Notified</a>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>📍 Location Strategy</strong>
+      Phase 1: Thao Dien flagship. Phase 2: D1 location. 
+      Each cafe has unique product curation and slight design variations, 
+      but consistent brand feel.
+    </div>
+
+    <!-- Cafe Gallery -->
+    <div class="section">
+      <div class="section-title">📸 Inside Our Cafes</div>
+      <div class="image-gallery" style="padding: 0;">
+        <div class="gallery-image">Interior 1</div>
+        <div class="gallery-image">Interior 2</div>
+        <div class="gallery-image">Coffee shot</div>
+        <div class="gallery-image">Product detail</div>
+      </div>
+    </div>
+
+    <div class="copy-suggestion">
+      "We don't have a showroom. We have cafes. Because good design should be lived in, not just looked at."
+    </div>
+
+    <!-- Map Section -->
+    <div style="padding: 24px 20px;">
+      <div class="section-title">Find Us</div>
+      <div style="height: 200px; background: var(--saola-light-gray); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+        <span style="color: var(--saola-gray);">📍 Interactive Map</span>
+      </div>
+      <p style="font-size: 12px; color: var(--saola-gray); margin-top: 12px; text-align: center;">
+        Tap to open in Google Maps
+      </p>
+    </div>
+
+    <!-- Events Teaser -->
+    <div class="feature-card" style="margin: 0 20px 20px;">
+      <div class="feature-icon">🎉</div>
+      <div class="feature-title">Cafe Events</div>
+      <div class="feature-text">
+        Design workshops. New collection launches. Member-only evenings. 
+        Follow us on Instagram for updates.
+      </div>
+      <a href="#" style="display: inline-block; margin-top: 12px; font-size: 13px; color: var(--saola-orange); font-weight: 500;">
+        @saoladesign →
+      </a>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">🛍️</span>
+        <span>Shop</span>
+      </div>
+      <div class="tab-item active">
+        <span class="tab-icon">☕</span>
+        <span>Cafes</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">💳</span>
+        <span>Member</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Notes -->
+  <div style="max-width: 428px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; font-size: 13px;">
+    <h3 style="color: var(--saola-orange); margin-bottom: 12px;">📝 Cafes Page Design Notes</h3>
+    <ul style="line-height: 2; color: #555;">
+      <li><strong>Hero:</strong> Beautiful interior shot showing products in use</li>
+      <li><strong>Concept explanation:</strong> Make "everything for sale" clear immediately</li>
+      <li><strong>Location cards:</strong> Expandable for multiple locations in future</li>
+      <li><strong>QR mention:</strong> Explain the scan-to-buy concept visually</li>
+      <li><strong>Menu preview:</strong> Not full menu, just a taste — drives curiosity</li>
+      <li><strong>Membership tie-in:</strong> Cafe is gateway to membership</li>
+      <li><strong>Map integration:</strong> Google Maps embed with directions link</li>
+    </ul>
+    
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">🖼️ Images Needed:</h4>
+    <ol style="line-height: 1.8; color: #555; padding-left: 20px;">
+      <li>Cafe interior hero shot (wide, showing products)</li>
+      <li>Detail shots of products with QR tags</li>
+      <li>Coffee being served</li>
+      <li>Happy customers in the space</li>
+      <li>Staff/barista shots</li>
+      <li>Exterior/storefront</li>
+    </ol>
+  </div>
+</body>
+</html>

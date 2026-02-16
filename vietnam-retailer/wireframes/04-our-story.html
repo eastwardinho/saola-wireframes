@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — Our Story Wireframe</title>
+  <link rel="stylesheet" href="00-wireframe-styles.css">
+  <style>
+    .story-hero {
+      background: linear-gradient(180deg, #2D2D2D 0%, #1a1a1a 100%);
+      color: white;
+      padding: 60px 24px;
+      text-align: center;
+    }
+    .story-hero h1 {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+    .story-hero p {
+      font-size: 16px;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+    .story-chapter {
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .story-chapter h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+    .story-chapter p {
+      font-size: 15px;
+      color: var(--saola-gray);
+      line-height: 1.8;
+    }
+    .animal-hero {
+      position: relative;
+      background: linear-gradient(135deg, #2D5016 0%, #1a3010 100%);
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+    .fact-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .fact-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--saola-orange);
+    }
+    .fact-label {
+      font-size: 13px;
+      color: var(--saola-gray);
+      margin-top: 8px;
+    }
+    .timeline {
+      padding: 24px;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 44px;
+      top: 40px;
+      bottom: 40px;
+      width: 2px;
+      background: var(--saola-light-gray);
+    }
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 24px;
+      height: 24px;
+      background: var(--saola-orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .timeline-content h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .timeline-content p {
+      font-size: 13px;
+      color: var(--saola-gray);
+      line-height: 1.5;
+    }
+    .timeline-year {
+      font-size: 11px;
+      color: var(--saola-orange);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .team-member {
+      text-align: center;
+      padding: 20px;
+    }
+    .team-photo {
+      width: 120px;
+      height: 120px;
+      background: var(--saola-cream);
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+    .team-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .team-role {
+      font-size: 13px;
+      color: var(--saola-orange);
+      margin-bottom: 8px;
+    }
+    .team-bio {
+      font-size: 13px;
+      color: var(--saola-gray);
+      line-height: 1.5;
+    }
+    .craft-region {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: var(--saola-cream);
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .craft-region-icon {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+    .craft-region-name {
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .craft-region-material {
+      font-size: 13px;
+      color: var(--saola-gray);
+    }
+    .quote-block {
+      background: var(--saola-charcoal);
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .quote-block blockquote {
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .quote-attribution {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="wireframe-header">
+    <h1>📖 OUR STORY</h1>
+    <p>The emotional heart of the brand — the Saola, Vietnam, craft, team</p>
+  </div>
+
+  <div class="wireframe-container">
+    <div class="page-title">Our Story Page</div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <div style="font-size: 20px;">←</div>
+      <div class="nav-logo">SAOLA</div>
+      <div class="nav-icons">
+        <div class="nav-icon">☰</div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="story-hero">
+      <span style="font-size: 60px; display: block; margin-bottom: 20px;">🦌</span>
+      <h1>The Saola Story</h1>
+      <p>Named after Vietnam's rarest creature.<br>Built to share Vietnam's hidden treasures.</p>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🎬 Hero Treatment</strong>
+      Video background of Vietnamese landscapes, fading to the Saola animal. 
+      Subtle, atmospheric. Could be still image with slow ken burns effect.
+    </div>
+
+    <!-- Chapter 1: The Animal -->
+    <div class="animal-hero">
+      <div style="font-size: 80px; margin-bottom: 16px;">🦌</div>
+      <h2 style="font-size: 22px; margin-bottom: 8px;">The Asian Unicorn</h2>
+      <p style="font-size: 14px; opacity: 0.8; max-width: 300px;">
+        So rare, scientists didn't discover it until 1992.
+      </p>
+    </div>
+
+    <div class="story-chapter">
+      <h2>Meet the Saola</h2>
+      <p>
+        Deep in the Annamite mountains, between Vietnam and Laos, lives one of the world's rarest large mammals. 
+        The Saola was unknown to science until 1992 — one of the most spectacular zoological discoveries of the 20th century.
+      </p>
+      <p style="margin-top: 16px;">
+        With its elegant horns and gentle eyes, the Saola is nicknamed the "Asian Unicorn." 
+        Fewer than 100 are believed to exist. It's a symbol of what's extraordinary hiding in plain sight.
+      </p>
+    </div>
+
+    <div class="copy-suggestion">
+      "Vietnamese craftsmanship is like the Saola — extraordinary, but hidden from the world. 
+      We're here to change that."
+    </div>
+
+    <!-- Fact Cards -->
+    <div style="display: flex; gap: 12px; padding: 0 20px; margin-bottom: 24px;">
+      <div class="fact-card" style="flex: 1;">
+        <div class="fact-number">&lt;100</div>
+        <div class="fact-label">Estimated population</div>
+      </div>
+      <div class="fact-card" style="flex: 1;">
+        <div class="fact-number">1992</div>
+        <div class="fact-label">Year discovered</div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>🦌 Conservation Angle</strong>
+      Consider donating % of sales to Saola conservation (WWF/IUCN). 
+      Creates authentic brand story + sustainability credentials. 
+      Could be membership perk: "1% of member fees support Saola protection."
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Chapter 2: Vietnamese Craft -->
+    <div class="story-chapter" style="background: var(--saola-cream);">
+      <h2>Hidden Treasures</h2>
+      <p>
+        Vietnam makes things for the world — but the world doesn't know it's Vietnam. 
+        Furniture, ceramics, lighting. Crafted here, shipped everywhere, brand labels from elsewhere.
+      </p>
+      <p style="margin-top: 16px; font-weight: 500;">
+        We think that's backwards.
+      </p>
+    </div>
+
+    <!-- Craft Regions -->
+    <div class="section">
+      <div class="section-title">🇻🇳 Where We Source</div>
+      
+      <div class="craft-region">
+        <div class="craft-region-icon">🏺</div>
+        <div>
+          <div class="craft-region-name">Binh Duong</div>
+          <div class="craft-region-material">Ceramics & Terrazzo</div>
+        </div>
+      </div>
+
+      <div class="craft-region">
+        <div class="craft-region-icon">🎋</div>
+        <div>
+          <div class="craft-region-name">Dong Nai</div>
+          <div class="craft-region-material">Bamboo & Rattan</div>
+        </div>
+      </div>
+
+      <div class="craft-region">
+        <div class="craft-region-icon">🪵</div>
+        <div>
+          <div class="craft-region-name">Binh Dinh</div>
+          <div class="craft-region-material">Hardwoods & Timber</div>
+        </div>
+      </div>
+
+      <div class="craft-region">
+        <div class="craft-region-icon">🪨</div>
+        <div>
+          <div class="craft-region-name">Thanh Hoa</div>
+          <div class="craft-region-material">Stone & Marble</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Artisan Image Gallery -->
+    <div class="image-gallery" style="padding: 24px 20px;">
+      <div class="gallery-image" style="font-size: 14px;">Artisan at work</div>
+      <div class="gallery-image" style="font-size: 14px;">Material detail</div>
+      <div class="gallery-image" style="font-size: 14px;">Workshop shot</div>
+    </div>
+
+    <div class="copy-suggestion">
+      "Every lamp, every piece of furniture — there are hands behind it. Skilled hands. Vietnamese hands. 
+      We think you should know whose."
+    </div>
+
+    <!-- Quote Block -->
+    <div class="quote-block">
+      <blockquote>
+        "You've never seen Vietnamese design like this. Because no one's shown you. Until now."
+      </blockquote>
+      <div class="quote-attribution">— The Saola Team</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Chapter 3: The Vision -->
+    <div class="story-chapter">
+      <h2>Design That Belongs</h2>
+      <p>
+        We create lighting and furniture that belongs in your home. 
+        Pieces that make you stop and say "where did you get that?" 
+        Design that's playful but never cheap. Premium but never cold.
+      </p>
+    </div>
+
+    <!-- Four Collections Preview -->
+    <div class="section">
+      <div class="section-title">Four Spirits</div>
+      <p style="font-size: 14px; color: var(--saola-gray); margin-bottom: 20px;">
+        Each collection is a different expression of Vietnamese design
+      </p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div style="background: linear-gradient(135deg, #FF6B6B 0%, #FFA400 100%); padding: 20px; border-radius: 12px; color: white; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🎨</div>
+          <div style="font-weight: 600; font-size: 14px;">Colorful Creator</div>
+          <div style="font-size: 11px; opacity: 0.9;">Bold & Playful</div>
+        </div>
+        <div style="background: linear-gradient(135deg, #9B59B6 0%, #3498DB 100%); padding: 20px; border-radius: 12px; color: white; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🧪</div>
+          <div style="font-weight: 600; font-size: 14px;">Experimental Rebel</div>
+          <div style="font-size: 11px; opacity: 0.9;">Avant-garde</div>
+        </div>
+        <div style="background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%); padding: 20px; border-radius: 12px; color: white; text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 8px;">🌍</div>
+          <div style="font-weight: 600; font-size: 14px;">Cosmopolitan</div>
+          <div style="font-size: 11px; opacity: 0.9;">Sustainable & Refined</div>
+        </div>
+        <div style="background: linear-gradient(135deg, #F5D7E3 0%, #E8C4D8 100%); padding: 20px; border-radius: 12px; color: var(--saola-charcoal); text-align: center;">
+          <div style="font-size: 28px; margin-bottom: 8px;">✨</div>
+          <div style="font-weight: 600; font-size: 14px;">Pretty & Posh</div>
+          <div style="font-size: 11px; opacity: 0.7;">Classic Elegant</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Chapter 4: The Team -->
+    <div class="story-chapter">
+      <h2>The People</h2>
+      <p>
+        A small team with big dreams. Designers, coffee lovers, 
+        and believers in Vietnamese potential.
+      </p>
+    </div>
+
+    <!-- Team Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 20px;">
+      <div class="team-member">
+        <div class="team-photo">👨‍💼</div>
+        <div class="team-name">Joe Eastwood</div>
+        <div class="team-role">Founder & Chairman</div>
+        <div class="team-bio">15 years building design businesses in Vietnam</div>
+      </div>
+      
+      <div class="team-member">
+        <div class="team-photo">👩‍💼</div>
+        <div class="team-name">Sammy</div>
+        <div class="team-role">Director of Product</div>
+        <div class="team-bio">Former Jonathan Charles, expert eye for quality</div>
+      </div>
+    </div>
+
+    <div class="wireframe-note">
+      <strong>👥 Team Section</strong>
+      Show real photos, brief bios. Humanizes the brand. 
+      Could include designers who created specific collections.
+    </div>
+
+    <!-- Timeline -->
+    <div class="section">
+      <div class="section-title">Our Journey</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2021</div>
+            <h4>The Idea</h4>
+            <p>Saola concept born from years of seeing Vietnamese craft go unrecognized</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2022</div>
+            <h4>65 Products Designed</h4>
+            <p>Full range developed with technical files ready for production</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">2026</div>
+            <h4>Launch</h4>
+            <p>Website goes live, first cafe planned for Thao Dien</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background: var(--saola-light-gray);"></div>
+          <div class="timeline-content">
+            <div class="timeline-year">Future</div>
+            <h4>The Dream</h4>
+            <p>Design cafes across Vietnam, sharing Vietnamese soul with the world</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="background: var(--saola-orange); padding: 32px 24px; text-align: center; color: white;">
+      <h3 style="font-size: 20px; margin-bottom: 12px;">Find Your Saola Spirit</h3>
+      <p style="font-size: 14px; opacity: 0.9; margin-bottom: 20px;">
+        Browse our collection or visit a cafe to experience it firsthand
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="#" class="btn btn-white btn-small">Shop Now</a>
+        <a href="#" class="btn btn-small" style="border: 2px solid white; color: white;">Find a Cafe</a>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item">
+        <span class="tab-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">🛍️</span>
+        <span>Shop</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">☕</span>
+        <span>Cafes</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">💳</span>
+        <span>Member</span>
+      </div>
+      <div class="tab-item">
+        <span class="tab-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design Notes -->
+  <div style="max-width: 428px; margin: 20px auto; padding: 20px; background: white; border-radius: 12px; font-size: 13px;">
+    <h3 style="color: var(--saola-orange); margin-bottom: 12px;">📝 Story Page Design Notes</h3>
+    <ul style="line-height: 2; color: #555;">
+      <li><strong>Structure:</strong> Tell in chapters — Animal → Vietnam → Design → Team</li>
+      <li><strong>Emotion first:</strong> This isn't a corporate about page. It's storytelling.</li>
+      <li><strong>The Saola animal:</strong> THE emotional anchor. Get great photos/video.</li>
+      <li><strong>Conservation:</strong> Consider real donation to Saola protection — authenticity</li>
+      <li><strong>Artisan content:</strong> Show faces, workshops, process. Make it human.</li>
+      <li><strong>Parallax/scroll:</strong> Good opportunity for cinematic scroll effects</li>
+    </ul>
+    
+    <h4 style="margin-top: 16px; margin-bottom: 8px;">🖼️ Images Needed:</h4>
+    <ol style="line-height: 1.8; color: #555; padding-left: 20px;">
+      <li>Saola animal photography (multiple angles)</li>
+      <li>Vietnamese landscape (Annamite mountains)</li>
+      <li>Artisan photos (3-5 different craftspeople)</li>
+      <li>Workshop/factory shots showing process</li>
+      <li>Material close-ups (ceramic, bamboo, wood, stone)</li>
+      <li>Team headshots (professional but warm)</li>
+      <li>Vietnam map with sourcing regions highlighted</li>
+    </ol>
+  </div>
+</body>
+</html>
