@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>Saola — Lotus Table Lamp</title>
+  <link rel="stylesheet" href="00-styles-v3.css">
+  <style>
+    .sticky-add {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 390px;
+      max-width: 100%;
+      background: var(--white);
+      padding: 16px 24px 28px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      z-index: 100;
+      display: flex;
+      gap: 12px;
+      border-radius: 24px 24px 0 0;
+    }
+    
+    .sticky-add .btn-primary {
+      flex: 1;
+    }
+    
+    .sticky-price {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 12px;
+    }
+    
+    .sticky-price-value {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--black);
+    }
+    
+    .sticky-price-label {
+      font-size: 10px;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .related-section {
+      background: var(--off-white);
+      padding: 32px 0;
+    }
+    
+    .related-header {
+      padding: 0 24px 20px;
+    }
+    
+    .related-scroll {
+      display: flex;
+      gap: 12px;
+      padding: 0 24px;
+      overflow-x: auto;
+    }
+    
+    .related-card {
+      flex: 0 0 140px;
+      background: var(--white);
+    }
+    
+    .related-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+    
+    .related-card-info {
+      padding: 12px;
+    }
+    
+    .related-card-name {
+      font-size: 12px;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    
+    .related-card-price {
+      font-size: 12px;
+      color: var(--gray);
+    }
+    
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 24px;
+      background: var(--off-white);
+    }
+    
+    .trust-badge {
+      text-align: center;
+    }
+    
+    .trust-badge-icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    
+    .trust-badge-text {
+      font-size: 10px;
+      color: var(--gray-dark);
+      letter-spacing: 0.02em;
+    }
+    
+    .showroom-prompt {
+      background: linear-gradient(135deg, var(--warm-cream) 0%, var(--warm-blush) 100%);
+      padding: 24px;
+      margin: 24px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    
+    .showroom-prompt-title {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    
+    .showroom-prompt-text {
+      font-size: 12px;
+      color: var(--gray-dark);
+      margin-bottom: 12px;
+    }
+    
+    .showroom-prompt-link {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--saola-orange);
+    }
+    
+    .phone-content {
+      padding-bottom: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-label">Product Page V3 — Lotus Table Lamp</div>
+
+  <div class="phone-frame">
+    <div class="phone-content">
+      
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="02-shop-v3.html" class="nav-back">←</a>
+        <div class="nav-logo">Saola</div>
+        <div class="nav-icons">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+              <polyline points="16 6 12 2 8 6"></polyline>
+              <line x1="12" y1="2" x2="12" y2="15"></line>
+            </svg>
+          </div>
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge">2</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Product Gallery -->
+      <div class="product-gallery">
+        <div class="gallery-scroll">
+          <div class="gallery-slide">
+            <img src="images/220217-Lotus.3.jpg" alt="Lotus Lamp Main">
+          </div>
+          <div class="gallery-slide">
+            <img src="images/220217-Lotus.4.jpg" alt="Lotus Lamp Detail">
+          </div>
+          <div class="gallery-slide">
+            <img src="images/220217-Lotus.5.jpg" alt="Lotus Lamp Side">
+          </div>
+        </div>
+        <div class="gallery-indicators">
+          <span class="gallery-dot active"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div class="product-detail">
+        
+        <!-- Header -->
+        <div class="product-detail-header">
+          <h1 class="product-detail-name">Lotus Table Lamp</h1>
+          <div class="product-detail-price">$99</div>
+        </div>
+
+        <!-- Description -->
+        <p class="product-detail-description">
+          Inspired by the lotus ponds of the Mekong Delta, this lamp brings serene elegance to any space. Handcrafted ceramic shade with warm, diffused light that transforms your room into a sanctuary.
+        </p>
+
+        <!-- Color Variants -->
+        <div class="variant-selector">
+          <div class="variant-label">Color — Cream</div>
+          <div class="variant-options">
+            <div class="variant-option variant-cream active"></div>
+            <div class="variant-option variant-white"></div>
+          </div>
+        </div>
+
+        <!-- Quantity -->
+        <div class="quantity-selector">
+          <div class="quantity-label">Quantity</div>
+          <div class="quantity-controls">
+            <button class="quantity-btn">−</button>
+            <span class="quantity-value">1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="accordion-title">Specifications</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <strong>Dimensions</strong><br>
+              Height: 42cm (16.5")<br>
+              Shade diameter: 28cm (11")<br>
+              Base diameter: 15cm (6")<br><br>
+              
+              <strong>Materials</strong><br>
+              Shade: Handcrafted ceramic<br>
+              Base: Brushed brass<br>
+              Cord: 180cm fabric-wrapped<br><br>
+              
+              <strong>Electrical</strong><br>
+              E27 socket, max 40W<br>
+              LED compatible<br>
+              Inline dimmer switch
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="accordion-title">Shipping & Returns</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              <strong>Shipping</strong><br>
+              Vietnam: 2-4 business days<br>
+              International: 7-14 business days<br>
+              Free shipping on orders over $150<br><br>
+              
+              <strong>Returns</strong><br>
+              30-day return policy<br>
+              Free returns for Vietnam orders<br>
+              Item must be unused and in original packaging
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="accordion-title">Care Instructions</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              Dust with a soft, dry cloth<br>
+              Avoid harsh chemicals<br>
+              Handle ceramic shade with care<br>
+              Keep away from direct sunlight to preserve finish
+            </div>
+          </div>
+        </div>
+
+        <!-- Showroom Prompt -->
+        <div class="showroom-prompt">
+          <div class="showroom-prompt-title">See it in person</div>
+          <div class="showroom-prompt-text">Visit our showrooms in Saigon & Hanoi</div>
+          <a href="#" class="showroom-prompt-link">Find Locations →</a>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="trust-badge-icon">🇻🇳</div>
+          <div class="trust-badge-text">Made in Vietnam</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">🚚</div>
+          <div class="trust-badge-text">Free Shipping</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge-icon">↩️</div>
+          <div class="trust-badge-text">30-Day Returns</div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <section class="related-section">
+        <div class="related-header">
+          <h3 class="section-title">You May Also Like</h3>
+        </div>
+        <div class="related-scroll">
+          <a href="#" class="related-card">
+            <img src="images/220217-Clove.7.jpg" alt="Clove Lamp">
+            <div class="related-card-info">
+              <div class="related-card-name">Clove Table Lamp</div>
+              <div class="related-card-price">$79</div>
+            </div>
+          </a>
+          <a href="#" class="related-card">
+            <img src="images/Geode-TL-Green.jpg" alt="Geode Lamp">
+            <div class="related-card-info">
+              <div class="related-card-name">Geode — Green</div>
+              <div class="related-card-price">$149</div>
+            </div>
+          </a>
+          <a href="#" class="related-card">
+            <img src="images/Dodeca-TL-Brown.jpg" alt="Dodeca Lamp">
+            <div class="related-card-info">
+              <div class="related-card-name">Dodeca Lamp</div>
+              <div class="related-card-price">$129</div>
+            </div>
+          </a>
+          <a href="#" class="related-card">
+            <img src="images/220215 Marshmallow_white.44.jpg" alt="Marshmallow">
+            <div class="related-card-info">
+              <div class="related-card-name">Marshmallow</div>
+              <div class="related-card-price">$119</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-logo">Saola</div>
+        <div class="footer-links">
+          <a href="01-homepage-v3.html" class="footer-link">Home</a>
+          <a href="02-shop-v3.html" class="footer-link">Shop</a>
+          <a href="04-about-v3.html" class="footer-link">Our Story</a>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 Saola Vietnam</p>
+        </div>
+      </footer>
+
+      <div class="home-indicator"></div>
+    </div>
+    
+    <!-- Sticky Add to Cart -->
+    <div class="sticky-add">
+      <div class="sticky-price">
+        <span class="sticky-price-label">Total</span>
+        <span class="sticky-price-value">$99</span>
+      </div>
+      <button class="btn btn-primary">Add to Cart</button>
+      <button class="btn-wishlist">
+        <svg viewBox="0 0 24 24">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

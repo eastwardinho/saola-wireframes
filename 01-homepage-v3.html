@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>Saola — Light Up Your Life</title>
+  <link rel="stylesheet" href="00-styles-v3.css">
+  <style>
+    /* Homepage-specific styles */
+    .hero-image-container {
+      height: 480px;
+    }
+    
+    .collection-preview {
+      padding: 0;
+    }
+    
+    .collection-preview-item {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+    }
+    
+    .collection-preview-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .collection-preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,26,26,0.7) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+    
+    .collection-preview-name {
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 8px;
+    }
+    
+    .collection-preview-cta {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+    }
+    
+    .story-section {
+      background: linear-gradient(180deg, #f8f6f4 0%, #ffffff 100%);
+      padding: 56px 28px;
+      text-align: center;
+    }
+    
+    .story-entry {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--saola-orange);
+      margin-bottom: 16px;
+    }
+    
+    .story-quote {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.4;
+      color: var(--black);
+      margin-bottom: 20px;
+    }
+    
+    .story-attribution {
+      font-size: 12px;
+      color: var(--gray);
+      letter-spacing: 0.02em;
+    }
+    
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    
+    .instagram-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+    }
+    
+    .instagram-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .instagram-header {
+      padding: 24px;
+      text-align: center;
+    }
+    
+    .instagram-handle {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--black);
+    }
+    
+    .instagram-follow {
+      font-size: 11px;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-label">Homepage V3 — Saola Vietnam</div>
+
+  <div class="phone-frame">
+    <div class="phone-content">
+      
+      <!-- Promo Strip -->
+      <div class="promo-strip">
+        Free shipping on orders over <span>$150</span>
+      </div>
+      
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </div>
+        <div class="nav-logo">Saola</div>
+        <div class="nav-icons">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+          </div>
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge">2</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-image-container">
+          <img src="images/220217-Lotus.3.jpg" alt="Lotus Table Lamp" class="hero-image">
+          <div class="hero-gradient"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-entry">New Collection</div>
+          <h1 class="hero-title">Light Up<br>Your Life</h1>
+          <div class="hero-cta">
+            <a href="02-shop-v3.html" class="btn btn-primary">Shop Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="section-sm">
+        <div class="section-header">
+          <h2 class="section-title">Best Sellers</h2>
+          <a href="02-shop-v3.html" class="section-link">View All</a>
+        </div>
+      </section>
+      
+      <div class="product-grid">
+        <a href="03-product-v3.html" class="product-card">
+          <div class="product-card-image">
+            <img src="images/220217-Lotus.4.jpg" alt="Lotus Table Lamp">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Lotus Table Lamp</div>
+            <div class="product-card-price">$99</div>
+          </div>
+        </a>
+        
+        <a href="03-product-v3.html" class="product-card">
+          <div class="product-card-image">
+            <img src="images/Geode-TL-Green.jpg" alt="Geode Table Lamp">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Geode Table Lamp</div>
+            <div class="product-card-price">$149</div>
+            <span class="product-card-tag">Popular</span>
+          </div>
+        </a>
+        
+        <a href="03-product-v3.html" class="product-card">
+          <div class="product-card-image">
+            <img src="images/Dodeca-TL-Brown.jpg" alt="Dodeca Lamp">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Dodeca Lamp</div>
+            <div class="product-card-price">$129</div>
+          </div>
+        </a>
+        
+        <a href="03-product-v3.html" class="product-card">
+          <div class="product-card-image">
+            <img src="images/220217-Clove.7.jpg" alt="Clove Table Lamp">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Clove Table Lamp</div>
+            <div class="product-card-price">$79</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Collection Preview -->
+      <div class="collection-banner">
+        <div class="collection-entry">Featured Collection</div>
+        <h2 class="collection-title">Pretty & Posh</h2>
+      </div>
+      
+      <div class="collection-preview">
+        <div class="collection-preview-item">
+          <img src="images/220215 Marshmallow_white.44.jpg" alt="Marshmallow Collection">
+          <div class="collection-preview-overlay">
+            <div class="collection-preview-name">Marshmallow</div>
+            <div class="collection-preview-cta">Explore →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Story -->
+      <section class="story-section">
+        <div class="story-entry">Our Story</div>
+        <p class="story-quote">"We believe light transforms spaces into sanctuaries."</p>
+        <p class="story-attribution">— Designed and Made in Vietnam</p>
+        <div class="brand-accent"></div>
+        <a href="04-about-v3.html" class="btn btn-outline btn-sm" style="margin-top: 16px;">Learn More</a>
+      </section>
+
+      <!-- Floor Lamps Feature -->
+      <div class="featured-product">
+        <img src="images/Geode FL - 01 (2).jpg" alt="Geode Floor Lamp">
+        <div class="featured-gradient"></div>
+        <div class="featured-content">
+          <div class="featured-entry">Floor Lamps</div>
+          <h3 class="featured-title">Make a Statement</h3>
+          <a href="02-shop-v3.html" class="btn btn-outline-white btn-sm">Shop Floor Lamps</a>
+        </div>
+      </div>
+
+      <!-- More Products -->
+      <div class="product-grid">
+        <a href="03-product-v3.html" class="product-card">
+          <div class="product-card-image">
+            <img src="images/210831 Wander.29.jpg" alt="Wander Floor Lamp">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Wander Floor Lamp</div>
+            <div class="product-card-price">$249</div>
+          </div>
+        </a>
+        
+        <a href="03-product-v3.html" class="product-card">
+          <div class="product-card-image">
+            <img src="images/Geode FL - 02.jpg" alt="Geode Floor Lamp">
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Geode Floor Lamp</div>
+            <div class="product-card-price">$299</div>
+            <span class="product-card-tag">New</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Instagram Section -->
+      <section class="instagram-header">
+        <div class="instagram-handle">@saola.vietnam</div>
+        <div class="instagram-follow">Follow us for inspiration</div>
+      </section>
+      
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="images/220217-Lotus.5.jpg" alt="Instagram">
+        </div>
+        <div class="instagram-item">
+          <img src="images/210831 Wander.31.jpg" alt="Instagram">
+        </div>
+        <div class="instagram-item">
+          <img src="images/220217-Clove.8.jpg" alt="Instagram">
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-logo">Saola</div>
+        <div class="footer-links">
+          <a href="02-shop-v3.html" class="footer-link">Shop All</a>
+          <a href="04-about-v3.html" class="footer-link">Our Story</a>
+          <a href="#" class="footer-link">Showrooms</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">Shipping</a>
+          <a href="#" class="footer-link">Returns</a>
+        </div>
+        <div class="footer-social">
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="white">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="1.5"></rect>
+            <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="1.5"></circle>
+            <circle cx="17.5" cy="6.5" r="1" fill="white"></circle>
+          </svg>
+          <svg class="footer-social-icon" viewBox="0 0 24 24" fill="white">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" fill="none" stroke="white" stroke-width="1.5"></path>
+          </svg>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 Saola Vietnam. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

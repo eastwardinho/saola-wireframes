@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>Saola — Our Story</title>
+  <link rel="stylesheet" href="00-styles-v3.css">
+  <style>
+    .about-hero {
+      height: 420px;
+      position: relative;
+    }
+    
+    .about-hero-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px 24px;
+      background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(26, 26, 26, 0.8) 100%
+      );
+    }
+    
+    .about-hero-entry {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--saola-orange);
+      margin-bottom: 8px;
+    }
+    
+    .about-hero-title {
+      font-size: 32px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--white);
+    }
+    
+    .brand-story {
+      padding: 48px 28px;
+    }
+    
+    .brand-story-quote {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.4;
+      color: var(--black);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    
+    .brand-story-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--gray-dark);
+      margin-bottom: 16px;
+    }
+    
+    .brand-name-meaning {
+      background: linear-gradient(135deg, var(--warm-cream) 0%, var(--warm-blush) 100%);
+      padding: 48px 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .brand-name-meaning::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 180px;
+      height: 180px;
+      background: var(--saola-orange);
+      opacity: 0.08;
+      border-radius: 50%;
+      filter: blur(50px);
+    }
+    
+    .meaning-entry {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--warm-caramel);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    
+    .meaning-title {
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: var(--black);
+      margin-bottom: 8px;
+      position: relative;
+    }
+    
+    .meaning-subtitle {
+      font-size: 14px;
+      color: var(--gray-dark);
+      font-style: italic;
+      position: relative;
+    }
+    
+    .meaning-description {
+      margin-top: 24px;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--gray-dark);
+      position: relative;
+    }
+    
+    .timeline {
+      padding: 48px 28px;
+    }
+    
+    .timeline-title {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-left: 24px;
+      padding-bottom: 32px;
+      border-left: 1px solid var(--off-white);
+    }
+    
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 0;
+      width: 9px;
+      height: 9px;
+      background: var(--saola-orange);
+      border-radius: 50%;
+    }
+    
+    .timeline-year {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--saola-orange);
+      margin-bottom: 4px;
+    }
+    
+    .timeline-event {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    
+    .timeline-detail {
+      font-size: 13px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+    
+    .craftsmanship {
+      position: relative;
+      height: 320px;
+      overflow: hidden;
+    }
+    
+    .craftsmanship img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .craftsmanship-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(26, 26, 26, 0.7) 0%,
+        transparent 70%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px;
+    }
+    
+    .craftsmanship-entry {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+    
+    .craftsmanship-title {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    
+    .craftsmanship-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+    
+    .mission {
+      padding: 48px 28px;
+      text-align: center;
+      background: var(--black);
+      color: var(--white);
+    }
+    
+    .mission-entry {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--saola-orange);
+      margin-bottom: 16px;
+    }
+    
+    .mission-statement {
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+    
+    .cta-section {
+      padding: 48px 28px;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-size: 24px;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    
+    .cta-text {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-label">About Page V3 — Brand Story</div>
+
+  <div class="phone-frame">
+    <div class="phone-content">
+      
+      <!-- Navigation -->
+      <nav class="nav">
+        <a href="01-homepage-v3.html" class="nav-back">←</a>
+        <div class="nav-logo">Saola</div>
+        <div class="nav-icons">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge">2</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <div class="about-hero">
+        <img src="images/210831 Wander.32.jpg" alt="Saola craftsmanship">
+        <div class="about-hero-content">
+          <div class="about-hero-entry">Our Story</div>
+          <h1 class="about-hero-title">Designed & Made<br>in Vietnam</h1>
+        </div>
+      </div>
+
+      <!-- Brand Story -->
+      <section class="brand-story">
+        <p class="brand-story-quote">"We believe light transforms spaces into sanctuaries."</p>
+        
+        <p class="brand-story-text">
+          Saola was born from a simple observation: the most beautiful moments happen in the right light. A dinner with loved ones. A quiet evening reading. The soft glow that welcomes you home.
+        </p>
+        
+        <p class="brand-story-text">
+          We set out to create lamps that do more than illuminate—they create atmosphere, evoke emotion, and celebrate Vietnamese craftsmanship on a global stage.
+        </p>
+        
+        <div class="brand-accent"></div>
+      </section>
+
+      <!-- Name Meaning -->
+      <section class="brand-name-meaning">
+        <div class="meaning-entry">What's in a Name</div>
+        <h2 class="meaning-title">Saola</h2>
+        <p class="meaning-subtitle">sao + la = star + leaf</p>
+        <p class="meaning-description">
+          Our name combines the Vietnamese words for "star" (sao) and "leaf" (la)—representing light that's both celestial and grounded in nature. The Saola is also a rare, graceful antelope found only in Vietnam, symbolizing our commitment to uniqueness and Vietnamese heritage.
+        </p>
+      </section>
+
+      <!-- Craftsmanship Image -->
+      <div class="craftsmanship">
+        <img src="images/220217-Clove.9.jpg" alt="Handcrafted detail">
+        <div class="craftsmanship-overlay">
+          <div class="craftsmanship-entry">Craftsmanship</div>
+          <h3 class="craftsmanship-title">Every Lamp, Handmade</h3>
+          <p class="craftsmanship-text">Our artisans bring decades of experience to every piece.</p>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <section class="timeline">
+        <h3 class="timeline-title">Our Journey</h3>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-event">Founded in Saigon</div>
+          <div class="timeline-detail">Started with 3 lamp designs and a small workshop</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-event">First Showroom</div>
+          <div class="timeline-detail">Opened our flagship space in District 1</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-event">International Debut</div>
+          <div class="timeline-detail">Featured at Milan Design Week</div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-event">4 Collections</div>
+          <div class="timeline-detail">Now offering over 24 unique lamp designs</div>
+        </div>
+      </section>
+
+      <!-- Values -->
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="value-icon">🌿</div>
+          <div class="value-title">Sustainable</div>
+          <div class="value-text">Eco-friendly materials and processes</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🤝</div>
+          <div class="value-title">Fair Trade</div>
+          <div class="value-text">Supporting local artisan communities</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">✨</div>
+          <div class="value-title">Quality First</div>
+          <div class="value-text">2-year warranty on all products</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🏠</div>
+          <div class="value-title">Made for Life</div>
+          <div class="value-text">Timeless designs that last</div>
+        </div>
+      </div>
+
+      <!-- Mission -->
+      <section class="mission">
+        <div class="mission-entry">Our Mission</div>
+        <p class="mission-statement">
+          To bring the warmth and craft of Vietnamese design into homes around the world—one lamp at a time.
+        </p>
+        <a href="02-shop-v3.html" class="btn btn-primary">Explore Our Collection</a>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <h3 class="cta-title">Visit Our Showrooms</h3>
+        <p class="cta-text">Experience Saola in person at our spaces in Saigon and Hanoi.</p>
+        <a href="#" class="btn btn-outline">Find Locations</a>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-logo">Saola</div>
+        <div class="footer-links">
+          <a href="01-homepage-v3.html" class="footer-link">Home</a>
+          <a href="02-shop-v3.html" class="footer-link">Shop</a>
+          <a href="#" class="footer-link">Showrooms</a>
+          <a href="#" class="footer-link">Contact</a>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 Saola Vietnam. All rights reserved.</p>
+        </div>
+      </footer>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>
