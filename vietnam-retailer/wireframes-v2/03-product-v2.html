@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saola — Lotus Lamp</title>
+  <link rel="stylesheet" href="00-styles-v2.css">
+  <style>
+    .gallery-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery-scroll img {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-label">Product Page V2 — Gallery + Easy Buy</div>
+
+  <div class="phone-frame">
+    <div class="phone-notch"></div>
+    
+    <div class="phone-content">
+      <!-- Navigation -->
+      <nav class="nav">
+        <div style="font-size: 18px;">←</div>
+        <div class="nav-logo">SAOLA</div>
+        <div class="nav-icons">
+          <span>🛒</span>
+        </div>
+      </nav>
+
+      <!-- Product Gallery -->
+      <div class="product-gallery">
+        <div class="gallery-scroll">
+          <img src="images/220217-Lotus.3.jpg" alt="Lotus Lamp">
+          <img src="images/220217-Lotus.4.jpg" alt="Lotus Lamp Detail">
+          <img src="images/220217-Lotus.5.jpg" alt="Lotus Lamp Side">
+        </div>
+        <div class="gallery-dots">
+          <span class="gallery-dot active"></span>
+          <span class="gallery-dot"></span>
+          <span class="gallery-dot"></span>
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-detail-info">
+        <h1 class="product-detail-name">Lotus Table Lamp</h1>
+        <div class="product-detail-price">$99</div>
+        
+        <p class="product-description">
+          Inspired by the lotus ponds of the Mekong Delta. Handcrafted ceramic shade with warm diffused light.
+        </p>
+
+        <button class="add-to-cart">Add to Cart</button>
+
+        <!-- Collapsible Specs -->
+        <div class="specs-toggle">
+          <span>Specifications</span>
+          <span>+</span>
+        </div>
+        <div class="specs-content">
+          Height: 42cm<br>
+          Shade diameter: 28cm<br>
+          Material: Ceramic, brass base<br>
+          Bulb: E27, max 40W (not included)<br>
+          Weight: 2.1kg
+        </div>
+
+        <div class="specs-toggle">
+          <span>Shipping</span>
+          <span>+</span>
+        </div>
+        <div class="specs-content">
+          Vietnam: 2-4 days<br>
+          International: 7-14 days<br>
+          Free shipping over $150
+        </div>
+
+        <!-- Showroom link — small, not prominent -->
+        <a href="05-visit-v2.html" class="showroom-link">See in showroom →</a>
+      </div>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+</body>
+</html>

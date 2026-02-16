@@ -1,0 +1,426 @@
+/* Saola V2 — Product-First, Minimal */
+/* Inspired by RH, Zara Home, Article, Castlery */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --saola-orange: #FFA400;
+  --black: #1a1a1a;
+  --gray: #666;
+  --light-gray: #f5f5f5;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #f0f0f0;
+  color: var(--black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* iPhone Frame */
+.phone-frame {
+  max-width: 428px;
+  margin: 20px auto;
+  background: var(--white);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  border-radius: 44px;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone-notch {
+  height: 47px;
+  background: var(--black);
+  position: relative;
+}
+
+.phone-notch::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 28px;
+  background: var(--black);
+  border-radius: 20px;
+}
+
+.phone-content {
+  min-height: 800px;
+  background: var(--white);
+}
+
+/* Navigation — Ultra Simple */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--white);
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--black);
+}
+
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+/* Hero — Product IS the message */
+.hero {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-cta {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--saola-orange);
+  color: var(--white);
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+/* Product Grid — Clean, minimal info */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--light-gray);
+}
+
+.product-card {
+  background: var(--white);
+  text-decoration: none;
+  color: var(--black);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.product-price {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* Section spacing */
+.section {
+  padding: 48px 20px;
+}
+
+.section-small {
+  padding: 24px 20px;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--light-gray);
+  overflow-x: auto;
+}
+
+.filter-item {
+  font-size: 12px;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.filter-item.active {
+  color: var(--black);
+  font-weight: 500;
+}
+
+/* Product Detail */
+.product-gallery {
+  width: 100%;
+}
+
+.product-gallery img {
+  width: 100%;
+  display: block;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.gallery-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--light-gray);
+}
+
+.gallery-dot.active {
+  background: var(--black);
+}
+
+.product-detail-info {
+  padding: 24px 20px;
+}
+
+.product-detail-name {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.product-detail-price {
+  font-size: 18px;
+  color: var(--gray);
+  margin-bottom: 24px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 16px;
+  background: var(--saola-orange);
+  color: var(--white);
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Collapsible Specs */
+.specs-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--light-gray);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.specs-content {
+  padding-bottom: 16px;
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* About Page */
+.about-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.about-content p {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--black);
+  margin-top: 32px;
+}
+
+/* Visit/Showroom */
+.visit-header {
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.visit-header h1 {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.showroom-card {
+  padding: 24px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.showroom-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.showroom-address {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.showroom-hours {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 200px;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+/* Footer — Simple */
+.footer {
+  padding: 32px 20px;
+  border-top: 1px solid var(--light-gray);
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.footer-link {
+  font-size: 12px;
+  color: var(--gray);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--gray);
+}
+
+/* Showroom link on product page */
+.showroom-link {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  font-size: 12px;
+  color: var(--gray);
+  text-decoration: underline;
+}
+
+/* Page label for wireframes */
+.page-label {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 12px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Home indicator */
+.home-indicator {
+  padding: 12px 0 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-indicator::after {
+  content: '';
+  width: 134px;
+  height: 5px;
+  background: var(--black);
+  border-radius: 3px;
+}
